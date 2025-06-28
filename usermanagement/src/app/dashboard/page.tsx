@@ -37,7 +37,7 @@ export default function DashboardPage() {
       }
     } catch (err: any) {
       setError("Not Authorized or Server Error!");
-    //   if (err?.response?.status === 401) router.push("/auth/login");
+      if (err?.response?.status === 401) router.push("/auth/login");
     } finally {
       setLoading(false);
     }
